@@ -1,0 +1,190 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.btn {
+  background-color: #ec8700;
+  padding: 0.8rem 2.5rem;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.header {
+  background-image: url("https://i.postimg.cc/YCKppgLP/background-sports.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: inherit;
+  color: white;
+  height: auto;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0 2rem 0;
+}
+.header__main {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.header__main__text h1 {
+  font-size: 4rem;
+  padding: 1rem 0 1rem 0;
+  max-width: 30rem;
+}
+.header__main__text p {
+  font-family: "Source Sans Pro", sans-serif;
+  padding-right: 31%;
+  line-height: 1.6rem;
+  font-weight: bold;
+  padding-bottom: 2.5rem;
+  max-width: 28rem;
+}
+.header__main__img {
+  margin-top: -6rem;
+}
+.header__main__card {
+  margin-top: 5rem;
+  display: grid;
+  grid-column: 1fr;
+  gap: 1rem;
+}
+.header__main__card .card {
+  background: linear-gradient(125deg, rgb(0, 0, 0) 70%, rgb(255, 188, 0) 70%);
+}
+.header__main__card .card__img {
+  background-image: url("https://i.postimg.cc/7LCpJ3Z0/img-card-1-right.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  height: 20rem;
+  padding: 0 0.5rem;
+}
+.header__main__card .card__img h3 {
+  padding-top: 2rem;
+}
+.header__main__card .card__img p {
+  padding: 2rem 7rem 3rem 0;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.6rem;
+}
+.header__main__card .second {
+  background: linear-gradient(-125deg, rgb(0, 0, 0) 70%, rgb(255, 188, 0) 70%);
+}
+.header__main__card .second div {
+  background-image: url("https://i.postimg.cc/P56LKwnS/img-card-2.png");
+  background-position: left bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 20rem;
+  padding-left: 0.5rem;
+  text-align: end;
+}
+.header__main__card .second div h3 {
+  padding-top: 2rem;
+}
+.header__main__card .second div p {
+  padding: 2rem 0 3rem 7rem;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.6rem;
+}
+.header__main__card .third {
+  background: linear-gradient(-125deg, rgb(0, 0, 0) 70%, rgb(255, 188, 0) 70%);
+}
+.header__main__card .third div {
+  background-image: url("https://i.postimg.cc/qMqLJCHy/img-card-3.png");
+  background-position: left bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 20rem;
+  padding-left: 0.5rem;
+  text-align: end;
+}
+.header__main__card .third div h3 {
+  padding-top: 2rem;
+}
+.header__main__card .third div p {
+  padding: 2rem 0 3rem 7rem;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.6rem;
+}
+.header__main__card .fourth {
+  background: linear-gradient(125deg, rgb(0, 0, 0) 70%, rgb(255, 188, 0) 70%);
+}
+.header__main__card .fourth div {
+  background-image: url("https://i.postimg.cc/yYTPs4dg/img-card-4.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 20rem;
+  padding: 0 0.5rem;
+}
+.header__main__card .fourth div h3 {
+  padding-top: 2rem;
+}
+.header__main__card .fourth div p {
+  padding: 2rem 7rem 3rem 0;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.6rem;
+}
+
+@media (min-width: 768px) {
+  .header__main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .header__main__text h1 {
+    font-size: 4rem;
+    padding: 0;
+    max-width: 50rem;
+  }
+  .header__main__text p {
+    font-family: "Source Sans Pro", sans-serif;
+    padding-right: 0;
+    line-height: 1.6rem;
+    padding-bottom: 2.5rem;
+    max-width: 50rem;
+  }
+  .header__main__img {
+    position: relative;
+    margin-top: 0;
+    margin: auto;
+    width: 100%;
+  }
+  .header__main__card {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

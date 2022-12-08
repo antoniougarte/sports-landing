@@ -1,0 +1,25 @@
+@use 'variables';
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+html{
+    box-sizing: border-box;
+}
+h1,h2,h3,p{
+    margin:0
+}
+a{
+    text-decoration: none;
+    color: variables.$color-blanco;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.btn{
+    background-color: variables.$color-naranja;
+    padding: .8rem 2.5rem;
+}

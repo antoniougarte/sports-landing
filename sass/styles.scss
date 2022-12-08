@@ -1,0 +1,168 @@
+@use 'variables';
+@use 'reset';
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 80%;
+}
+.text-center{
+    text-align: center;
+}
+.mt-2{
+    margin-top:2rem
+}
+.header{
+    background-image: url('https://i.postimg.cc/YCKppgLP/background-sports.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: inherit;
+    color: variables.$color-blanco;
+    height: auto;
+
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0 2rem 0;
+    }
+    &__main{
+        display: grid;
+        grid-template-columns: 1fr;
+        &__text{
+            & h1{
+                font-size: 4rem;
+                padding: 1rem 0 1rem 0;
+                max-width: 30rem;
+            }
+            & p{
+                font-family: 'Source Sans Pro', sans-serif;
+                padding-right: 31%;
+                line-height: 1.6rem;
+                font-weight: bold;
+                padding-bottom: 2.5rem;
+                max-width: 28rem;
+            }
+        }
+        &__img{
+            margin-top: -6rem;
+        }
+        &__card{
+            margin-top: 5rem;
+            display: grid;
+            grid-column: 1fr;
+            gap: 1rem;
+
+            & .card{
+                background: linear-gradient(125deg, rgba(0,0,0,1) 70%, rgba(255,188,0,1)70%);
+                &__img{
+                    background-image: url('https://i.postimg.cc/7LCpJ3Z0/img-card-1-right.png');
+                    background-position: right bottom;
+                    background-repeat: no-repeat;
+                    height: 20rem;
+                    padding: 0 .5rem;
+                    & h3{
+                        padding-top: 2rem;
+                    }
+                    & p{
+                        padding: 2rem 7rem 3rem 0;
+                        font-family: 'Source Sans Pro', sans-serif;
+                        line-height: 1.6rem;
+                    }
+                }
+            }
+            & .second{
+                background: linear-gradient(-125deg, rgba(0,0,0,1) 70%, rgba(255,188,0,1)70%);
+                & div{
+                    background-image: url('https://i.postimg.cc/P56LKwnS/img-card-2.png');
+                    background-position: left bottom;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    height: 20rem;
+                    padding-left: .5rem;
+                    text-align: end;
+                    & h3{
+                        padding-top: 2rem;
+                    }
+                    & p{
+                        padding: 2rem 0 3rem 7rem;
+                        font-family: 'Source Sans Pro', sans-serif;
+                        line-height: 1.6rem;
+                    }
+                }
+            }
+            & .third{
+                background: linear-gradient(-125deg, rgba(0,0,0,1) 70%, rgba(255,188,0,1)70%);
+                & div{
+                    background-image: url('https://i.postimg.cc/qMqLJCHy/img-card-3.png');
+                    background-position: left bottom;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    height: 20rem;
+                    padding-left: .5rem;
+                    text-align: end;
+                    & h3{
+                        padding-top: 2rem;
+                    }
+                    & p{
+                        padding: 2rem 0 3rem 7rem;
+                        font-family: 'Source Sans Pro', sans-serif;
+                        line-height: 1.6rem;
+                    }
+                }
+            }
+            & .fourth{
+                background: linear-gradient(125deg, rgba(0,0,0,1) 70%, rgba(255,188,0,1)70%);
+                & div{
+                    background-image: url('https://i.postimg.cc/yYTPs4dg/img-card-4.png');
+                    background-position: right bottom;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    height: 20rem;
+                    padding: 0 .5rem;
+                    & h3{
+                        padding-top: 2rem;
+                    }
+                    & p{
+                        padding: 2rem 7rem 3rem 0;
+                        font-family: 'Source Sans Pro', sans-serif;
+                        line-height: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media (min-width: 768px) {
+
+    .header__main{
+        grid-template-columns: 1fr 1fr;
+        &__text{
+        & h1{
+            font-size: 4rem;
+            padding:0;
+            max-width: 50rem;
+        }
+        & p{
+            font-family: 'Source Sans Pro', sans-serif;
+            padding-right: 0;
+            line-height: 1.6rem;
+            padding-bottom: 2.5rem;
+            max-width: 50rem;
+        }
+
+        }
+        &__img{
+            position: relative;
+            margin-top: 0;
+            margin: auto;
+            width: 100%;
+        }
+        &__card{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
