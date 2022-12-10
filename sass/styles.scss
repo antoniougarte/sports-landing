@@ -105,6 +105,39 @@
         }
     }
 }
+.newest{
+    text-align: center;
+    padding: 4rem 0;
+    &__h2{
+        font-size: 3rem;
+    }
+    &__p{
+        padding: 2rem 2rem;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: bold;
+        line-height: 1.6;
+    }
+    &__cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 1rem;
+        &__card{
+            display: flex;
+            flex-direction: column;
+            justify-content:end;
+            align-items: center;
+            & p{
+                font-size: 1.3rem;
+                font-weight: bold;
+                padding: 1.5rem 0;
+            }
+            & img{
+                max-width: 15rem;
+            }
+        }
+    }
+}
+
 
 
 
@@ -152,6 +185,10 @@
         & .cards__container{
             grid-template-columns: 1fr 1fr;
         }
+    }
+    .newest__cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 @media (min-width: 1200px) {
