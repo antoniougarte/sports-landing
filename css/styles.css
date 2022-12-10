@@ -32,12 +32,10 @@ img {
   width: 80%;
 }
 
-.text-center {
-  text-align: center;
-}
-
-.mt-2 {
-  margin-top: 2rem;
+.cards__container {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .header__main__hero {
@@ -63,6 +61,70 @@ img {
 }
 .header__main__hero__container__img {
   margin-top: -7rem;
+}
+.header__main__cards {
+  background-image: url("https://i.postimg.cc/3xsZYgpN/background-sports2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.header__main__cards .cards__container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  padding-bottom: 4rem;
+}
+.header__main__cards .cards__container .card {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(103deg, rgb(0, 0, 0) 80%, rgb(255, 188, 0) 80%);
+}
+.header__main__cards .cards__container .card p {
+  padding: 1rem 0 2rem 0;
+}
+.header__main__cards .cards__container .card .card__img {
+  padding: 4rem 1rem 4.5rem 1rem;
+}
+.header__main__cards .cards__container .card .card__img p {
+  font-family: "Source Sans Pro", sans-serif;
+}
+.header__main__cards .cards__container .card-one div {
+  background-image: url("https://i.postimg.cc/7LCpJ3Z0/img-card-1-right.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.header__main__cards .cards__container .card-one div p {
+  padding-right: 30%;
+}
+.header__main__cards .cards__container .card-two div {
+  background-image: url("https://i.postimg.cc/P56LKwnS/img-card-2.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: end;
+}
+.header__main__cards .cards__container .card-two div p {
+  padding-left: 30%;
+}
+.header__main__cards .cards__container .card-three div {
+  background-image: url("https://i.postimg.cc/qMqLJCHy/img-card-3.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: end;
+}
+.header__main__cards .cards__container .card-three div p {
+  padding-left: 30%;
+}
+.header__main__cards .cards__container .card-four div {
+  background-image: url("https://i.postimg.cc/yYTPs4dg/img-card-4.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.header__main__cards .cards__container .card-four div p {
+  padding-right: 30%;
 }
 
 @media (min-width: 768px) {
@@ -96,6 +158,9 @@ img {
   }
   .header__main__hero__container__img {
     margin-top: -13rem;
+  }
+  .header__main__cards .cards__container {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 1200px) {

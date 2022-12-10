@@ -6,39 +6,106 @@
     margin: 0 auto;
     width: 80%;
 }
-.text-center{
-    text-align: center;
-}
-.mt-2{
-    margin-top:2rem
+.cards__container{
+    max-width: 900px;
+    margin: 0 auto;
+    width: 80%;
 }
 
-.header__main__hero{
-    background-image: url('https://i.postimg.cc/YCKppgLP/background-sports.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: variables.$color-blanco;
-    padding: 2rem 0;
-    &__container{
-        display: grid;
-        grid-template-columns: 1fr;
-        &__text{
-            & h1{
-                font-size: 4rem;
+.header__main{
+    &__hero{
+        background-image: url('https://i.postimg.cc/YCKppgLP/background-sports.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: variables.$color-blanco;
+        padding: 2rem 0;
+        &__container{
+            display: grid;
+            grid-template-columns: 1fr;
+            &__text{
+                & h1{
+                    font-size: 4rem;
+                }
+                & p{
+                    font-family: 'Source Sans Pro', sans-serif;
+                    padding: 1.5rem 0 2.5rem 0;
+                    padding-right: 9rem;
+                    line-height: 1.6;
+                }
             }
-            & p{
-                font-family: 'Source Sans Pro', sans-serif;
-                padding: 1.5rem 0 2.5rem 0;
-                padding-right: 9rem;
-                line-height: 1.6;
+            &__img{
+                margin-top: -7rem;
             }
         }
-        &__img{
-            margin-top: -7rem;
+    }
+    &__cards{
+        background-image: url('https://i.postimg.cc/3xsZYgpN/background-sports2.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: variables.$color-blanco;
+        & .cards__container{
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: 1fr;
+            padding-bottom: 4rem;
+            & .card{
+                background: rgb(0,0,0);
+                background: linear-gradient(103deg, rgba(0,0,0,1) 80%, rgba(255,188,0,1) 80%);
+                & p{
+                    padding: 1rem 0 2rem 0;
+                }
+                & .card__img{
+                    padding: 4rem 1rem 4.5rem 1rem;
+                    & p{
+                        font-family: 'Source Sans Pro', sans-serif;
+                    }
+                }
+            }
+            & .card-one div{
+                background-image: url('https://i.postimg.cc/7LCpJ3Z0/img-card-1-right.png');
+                background-position: right;
+                background-repeat: no-repeat;
+                background-size: contain;
+                & p{
+                    padding-right: 30%;
+                }
+            }
+            
+            & .card-two div{
+                background-image: url('https://i.postimg.cc/P56LKwnS/img-card-2.png');
+                background-position: left;
+                background-repeat: no-repeat;
+                background-size: contain;
+                text-align: end;
+                & p{
+                    padding-left: 30%;
+                }
+            }
+            & .card-three div{
+                background-image: url('https://i.postimg.cc/qMqLJCHy/img-card-3.png');
+                background-position: left;
+                background-repeat: no-repeat;
+                background-size: cover;
+                text-align: end;
+                & p{
+                    padding-left: 30%;
+                }
+            }
+            & .card-four div{
+                background-image: url('https://i.postimg.cc/yYTPs4dg/img-card-4.png');
+                background-position: right;
+                background-repeat: no-repeat;
+                background-size: contain;
+                & p{
+                    padding-right: 30%;
+                }
+            }
         }
     }
 }
+
 
 
 @media (min-width: 768px) {
@@ -62,25 +129,30 @@
     }
     .header__main__hero{
         
-    padding: 6rem 0;
-    &__container{
-        grid-template-columns: 1fr;
-        &__text{
-            & h1{
-                font-size: 4rem;
-                max-width: 25rem;
+        padding: 6rem 0;
+        &__container{
+            grid-template-columns: 1fr;
+            &__text{
+                & h1{
+                    font-size: 4rem;
+                    max-width: 25rem;
+                }
+                & p{
+                    padding-right: 15rem;
+                    line-height: 1.6;
+                }
             }
-            & p{
-                padding-right: 15rem;
-                line-height: 1.6;
+            &__img{
+                margin-top:-13rem;
+                
             }
-        }
-        &__img{
-            margin-top:-13rem;
-            
         }
     }
-}
+    .header__main__cards{
+        & .cards__container{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 }
 @media (min-width: 1200px) {
     .container{
@@ -103,7 +175,6 @@
             }
             &__img{
                 margin-top: 0;
-                
             }
         }
     }
