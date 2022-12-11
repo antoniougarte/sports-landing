@@ -14,18 +14,22 @@
 
 .header{
     &__nav{
-        background-color: gray;
+        background-color: variables.$color-negro;
         position: fixed;
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
+        &__logo{
+            padding: 1rem;
+        }
+
         &__menu{
             position: absolute;
-            top: 80px;
+            top: 65px;
             width: 100%;
-            background-color: gray;
+            background-color: variables.$color-negro;
             display: flex;
             flex-direction: column;
             text-align: center;
@@ -33,12 +37,13 @@
                 padding: 1rem 0;
             }
             & a:hover{
-                background-color: black;
+                background-color: variables.$color-naranja;
             }
             visibility:hidden;
         }
     }
     &__main{
+        padding-top: 60px;
         &__hero{
             background-image: url('https://i.postimg.cc/YCKppgLP/background-sports.png');
             background-position: center;
@@ -137,7 +142,7 @@
     }
 }
 .active{
-    visibility: inherit;
+    visibility: visible;
 }
 .newest{
     text-align: center;
@@ -171,9 +176,95 @@
         }
     }
 }
+.btn-menu{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    padding: 0;
+    margin-right: 1rem;
+}
+.hamburger-inner,.hamburger-inner:before, .hamburger-inner:after {
+    background-color: white !important;
+}
 
-
-
+.about{
+    &__tech{
+        background-image: url('https://i.postimg.cc/4y7Sc8PF/about-1.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 4rem 0;
+        &__grid{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            &__txt{
+                & h3{
+                    font-size: 3rem;
+                    padding-bottom: 2rem;
+                }
+                & p{
+                    padding: 0 0 3rem 0;
+                    line-height: 1.6;
+                    font-family: 'Source Sans Pro', sans-serif;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    &__instructor{
+        background-image: url('https://i.postimg.cc/c1vxT05P/about-2.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 4rem 0;
+        &__grid{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            &__txt{
+                & h3{
+                    font-size: 3rem;
+                    padding-bottom: 2rem;
+                }
+                & p{
+                    padding: 0 0 3rem 0;
+                    line-height: 1.6;
+                    font-family: 'Source Sans Pro', sans-serif;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    &__team{
+        background-image: url('https://i.postimg.cc/HnqP9QPW/about-3.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 4rem 0;
+        &__grid{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            &__txt{
+                & h3{
+                    font-size: 3rem;
+                    padding-bottom: 2rem;
+                }
+                & p{
+                    padding: 0 0 3rem 0;
+                    line-height: 1.6;
+                    font-family: 'Source Sans Pro', sans-serif;
+                    font-weight: bold;
+                }
+            }
+            &__img{
+                background: rgb(255,173,1);
+                background: linear-gradient(90deg, rgba(255,173,1,1) 60%, rgba(0,0,0,1) 60%);
+            }
+        }
+    }
+}
 
 @media (min-width: 768px) {
     .header__main__hero__container{
@@ -194,24 +285,26 @@
     .container{
         width: 70%;
     }
-    .header__main__hero{
-        
-        padding: 6rem 0;
-        &__container{
-            grid-template-columns: 1fr;
-            &__text{
-                & h1{
-                    font-size: 4rem;
-                    max-width: 25rem;
+    .header{
+
+        &__main__hero{
+            padding: 6rem 0;
+            &__container{
+                grid-template-columns: 1fr;
+                &__text{
+                    & h1{
+                        font-size: 4rem;
+                        max-width: 25rem;
+                    }
+                    & p{
+                        padding-right: 15rem;
+                        line-height: 1.6;
+                    }
                 }
-                & p{
-                    padding-right: 15rem;
-                    line-height: 1.6;
+                &__img{
+                    margin-top:-13rem;
+                    
                 }
-            }
-            &__img{
-                margin-top:-13rem;
-                
             }
         }
     }
@@ -224,28 +317,67 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .about{
+        &__tech{
+            &__grid{
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+        &__instructor{
+            &__grid{
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+        &__team{
+            &__grid{
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+    }
+
 }
 @media (min-width: 1200px) {
     .container{
         width: 60%;
     }
-    .header__main__hero{
-        
-        padding: 6rem 0;
-        &__container{
-            grid-template-columns: 1fr 1fr;
-            &__text{
-                & h1{
-                    font-size: 4rem;
-                    max-width: 25rem;
-                }
-                & p{
-                    padding-right: 0;
-                    line-height: 1.6;
+    .header{
+        &__nav{
+            flex-direction: row;
+            &__btn{
+                display: none;
+            }
+            &__menu{
+                visibility: visible;
+                flex-direction: row;
+                width: auto;
+                position: relative;
+                top: 0;
+                & a{
+                    padding: 1rem;
                 }
             }
-            &__img{
-                margin-top: 0;
+        }
+        &__main__hero{
+        
+            padding: 6rem 0;
+            &__container{
+                grid-template-columns: 1fr 1fr;
+                &__text{
+                    & h1{
+                        font-size: 4rem;
+                        max-width: 25rem;
+                    }
+                    & p{
+                        padding-right: 0;
+                        line-height: 1.6;
+                    }
+                }
+                &__img{
+                    margin-top: 0;
+                }
             }
         }
     }

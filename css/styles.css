@@ -40,18 +40,21 @@ img {
 }
 
 .header__nav {
-  background-color: gray;
+  background-color: black;
   position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.header__nav__logo {
+  padding: 1rem;
+}
 .header__nav__menu {
   position: absolute;
-  top: 80px;
+  top: 65px;
   width: 100%;
-  background-color: gray;
+  background-color: black;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -61,7 +64,10 @@ img {
   padding: 1rem 0;
 }
 .header__nav__menu a:hover {
-  background-color: black;
+  background-color: #ec8700;
+}
+.header__main {
+  padding-top: 60px;
 }
 .header__main__hero {
   background-image: url("https://i.postimg.cc/YCKppgLP/background-sports.png");
@@ -157,7 +163,7 @@ img {
 }
 
 .active {
-  visibility: inherit;
+  visibility: visible;
 }
 
 .newest {
@@ -191,6 +197,89 @@ img {
 }
 .newest__cards__card img {
   max-width: 15rem;
+}
+
+.btn-menu {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  padding: 0;
+  margin-right: 1rem;
+}
+
+.hamburger-inner, .hamburger-inner:before, .hamburger-inner:after {
+  background-color: white !important;
+}
+
+.about__tech {
+  background-image: url("https://i.postimg.cc/4y7Sc8PF/about-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4rem 0;
+}
+.about__tech__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.about__tech__grid__txt h3 {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+.about__tech__grid__txt p {
+  padding: 0 0 3rem 0;
+  line-height: 1.6;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+}
+.about__instructor {
+  background-image: url("https://i.postimg.cc/c1vxT05P/about-2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4rem 0;
+}
+.about__instructor__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.about__instructor__grid__txt h3 {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+.about__instructor__grid__txt p {
+  padding: 0 0 3rem 0;
+  line-height: 1.6;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+}
+.about__team {
+  background-image: url("https://i.postimg.cc/HnqP9QPW/about-3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4rem 0;
+}
+.about__team__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.about__team__grid__txt h3 {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+.about__team__grid__txt p {
+  padding: 0 0 3rem 0;
+  line-height: 1.6;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+}
+.about__team__grid__img {
+  background: rgb(255, 173, 1);
+  background: linear-gradient(90deg, rgb(255, 173, 1) 60%, rgb(0, 0, 0) 60%);
 }
 
 @media (min-width: 768px) {
@@ -232,10 +321,38 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .about__tech__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .about__instructor__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .about__team__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
 }
 @media (min-width: 1200px) {
   .container {
     width: 60%;
+  }
+  .header__nav {
+    flex-direction: row;
+  }
+  .header__nav__btn {
+    display: none;
+  }
+  .header__nav__menu {
+    visibility: visible;
+    flex-direction: row;
+    width: auto;
+    position: relative;
+    top: 0;
+  }
+  .header__nav__menu a {
+    padding: 1rem;
   }
   .header__main__hero {
     padding: 6rem 0;
