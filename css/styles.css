@@ -238,9 +238,6 @@ img {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
 }
-.about__tech__grid__img img {
-  max-width: 550px;
-}
 .about__instructor {
   background-image: url("https://i.postimg.cc/c1vxT05P/about-2.png");
   background-position: center;
