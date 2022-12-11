@@ -211,6 +211,11 @@
                     font-weight: bold;
                 }
             }
+            &__img{
+                & img{
+                    max-width: 550px;
+                }
+            }
         }
     }
     &__instructor{
@@ -261,7 +266,10 @@
             }
             &__img{
                 background: rgb(255,173,1);
-                background: linear-gradient(90deg, rgba(255,173,1,1) 60%, rgba(0,0,0,1) 60%);
+                background: linear-gradient(270deg, rgba(255,173,1,1) 60%, rgba(0,0,0,1) 60%);
+            & img{
+                max-width: 420px;
+            }
             }
         }
     }

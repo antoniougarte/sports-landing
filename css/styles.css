@@ -238,6 +238,9 @@ img {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
 }
+.about__tech__grid__img img {
+  max-width: 550px;
+}
 .about__instructor {
   background-image: url("https://i.postimg.cc/c1vxT05P/about-2.png");
   background-position: center;
@@ -284,7 +287,10 @@ img {
 }
 .about__team__grid__img {
   background: rgb(255, 173, 1);
-  background: linear-gradient(90deg, rgb(255, 173, 1) 60%, rgb(0, 0, 0) 60%);
+  background: linear-gradient(270deg, rgb(255, 173, 1) 60%, rgb(0, 0, 0) 60%);
+}
+.about__team__grid__img img {
+  max-width: 420px;
 }
 
 .footer {
