@@ -286,9 +286,6 @@ img {
   background: rgb(255, 173, 1);
   background: linear-gradient(270deg, rgb(255, 173, 1) 60%, rgb(0, 0, 0) 60%);
 }
-.about__team__grid__img img {
-  max-width: 420px;
-}
 
 .footer {
   padding: 2rem 0 0 0;
